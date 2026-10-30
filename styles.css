@@ -1,0 +1,193 @@
+@font-face {
+    font-family: 'Cabinet Grotesk';
+    src: url(fonts/CabinetGrotesk-Regular.otf) format(otf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Cabinet Grotesk';
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-height: 100vh;
+
+    width: 100vw;
+
+    gap: 40px;
+
+    background-color: #201f1f;
+    color: white;
+}
+
+#top {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+#inputs {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+#weight-input-form {
+    /* flex: 1; */
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    background-color: rgb(255, 255, 255, 0.3);
+    border: 1px solid #c9c4c4;
+    border-radius: 4px;
+    color: white;
+    padding: 4px 8px;
+}
+
+input::placeholder {
+    color: #9e9e9e;
+}
+
+#bottom {
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    align-items: center;
+    width: 80%;
+}
+#barbell-container {
+    display: none;
+    flex-direction: row;
+    /* gap: 8px; */
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+
+    border: 4px dashed #5a7b55;
+    background-color: rgb(90, 123, 85, .4);
+    border-radius: 16px;
+
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.side-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: fit-content;
+    padding: 0px 20px;
+    z-index: 1;
+}
+
+#left-side {
+    flex-direction: row-reverse;
+}
+
+#right-side {
+    flex-direction: row;
+}
+
+#barbell {
+    position: absolute;
+    top: calc(50% - 5px);
+    min-width: 95%;
+    background-color: #343434;
+    height: 10px;
+    z-index: 0;
+    
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.weight-plate {
+    box-sizing: border-box;
+    /* background-color: #343434; */
+    /* border: 2px solid #8f8b8b; */
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    color: white;
+
+    font-size: 14px;
+}
+
+.plate-45 {
+    height: 200px;
+    background-color: rgb(245, 66, 93, 0.55);
+    border-color: rgb(245, 66, 93);
+
+}
+
+.plate-35 {
+    height: 185px;
+    background-color: rgba(227, 79, 69, 0.55);
+    border-color: rgb(227, 79, 69);
+}
+
+.plate-25 {
+    height: 150px;
+    /* background-color: rgb(245, 182, 66, 0.55);
+    border-color: rgb(245, 182, 66); */
+    background-color: rgba(234, 99, 97, 0.55);
+    border-color: rgb(234, 99, 97);
+}
+
+.plate-10 {
+    height: 125px;
+    background-color: rgba(224, 88, 55, 0.55);
+    border-color: rgb(224, 88, 55);
+}
+
+.plate-5 {
+    height: 95px;
+    background-color: rgba(227, 127, 66, 0.55);
+    border-color: rgb(227, 127, 66);
+}
+
+.plate-2-5 {
+    height: 70px;
+    background-color: rgba(230, 170, 86, 0.55);
+    border-color: rgb(230, 170, 86);
+}
+
+.plate-1 {
+    height: 45px;
+    background-color: rgba(205, 202, 109, 0.55);
+    border-color: rgb(205, 202, 109);
+}
+
+
+@media (max-width: 800px) {
+    #right-side {
+        display: none;
+    }
+}

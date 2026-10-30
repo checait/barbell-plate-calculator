@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbell Weight Calculator</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    
+    <link href="styles.css" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="top">
+        <form id="weight-input-form">
+            <div id="inputs">
+                <div class="input-wrapper">
+                    <label for="weight">Input weight (lbs)</label>
+                    <input type="number" name="weight" id="weight">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="barbell-weight">Barbell weight (lbs)</label>
+                    <input type="number" name="barbell-weight" id="barbell-weight" placeholder="Default: 45 lb">
+                </div>
+
+            </div>
+            
+            <input type="submit" value="Go">
+        </form>
+    </div>
+    
+
+    <div id="bottom">
+        <div id="barbell-container">
+            <div class="side-container" id="left-side"></div>
+            <div class="side-container" id="right-side"></div>
+            <div id="barbell"></div>
+        </div>
+     </div>
+    
+</body>
+</html>
