@@ -15,6 +15,11 @@ body {
     color: white;
 }
 
+#top, #bottom {
+    width: 100%;
+    /* height: fit-content; */
+}
+
 #top {
     display: flex;
     flex-direction: column;
@@ -178,5 +183,23 @@ input::placeholder {
 @media (max-width: 800px) {
     #right-side {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        gap: 40px;
+    }
+    #inputs {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #weight-input-form {
+        gap: 40px;
+    }
+
+    #top {
+        height: 30%;
     }
 }
