@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Cabinet Grotesk';
+    font-family: 'JetBrains Mono';
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +76,6 @@ input::placeholder {
 #barbell-container {
     display: flex;
     flex-direction: row;
-    /* gap: 8px; */
     align-items: center;
     justify-content: space-between;
 
@@ -134,7 +133,7 @@ input::placeholder {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30px;
+    width: 35px;
     color: white;
 
     font-size: 14px;
@@ -155,8 +154,6 @@ input::placeholder {
 
 .plate-25 {
     height: 150px;
-    /* background-color: rgb(245, 182, 66, 0.55);
-    border-color: rgb(245, 182, 66); */
     background-color: rgba(234, 99, 97, 0.55);
     border-color: rgb(234, 99, 97);
 }
@@ -177,6 +174,7 @@ input::placeholder {
     height: 70px;
     background-color: rgba(230, 170, 86, 0.55);
     border-color: rgb(230, 170, 86);
+    letter-spacing: -.5px;
 }
 
 .plate-1 {
