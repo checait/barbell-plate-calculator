@@ -14,7 +14,6 @@
         event.preventDefault();
         leftSide.replaceChildren();
         rightSide.replaceChildren();
-        weightContainer.style.display = 'flex';
 
         const formData = new FormData(inputForm);
         const weight = formData.get("weight");
@@ -27,17 +26,44 @@
         console.log(weightArray);
 
         weightArray.forEach(plate => {
-            const newWeight = document.createElement('div');
+            const newWeightLeft = document.createElement('div');
+            const newWeightRight = document.createElement('div');
 
             if (plate === 2.5) {
-                newWeight.className = "weight-plate plate-2-5"
+                newWeightLeft.className = "weight-plate plate-2-5"
+                newWeightRight.className = "weight-plate plate-2-5"
             } else {
-                newWeight.className = `weight-plate plate-${plate}`;
+                newWeightLeft.className = `weight-plate plate-${plate}`;
+                newWeightRight.className = `weight-plate plate-${plate}`;
             }
-            newWeight.append(plate);
+            newWeightLeft.append(plate);
+            newWeightRight.append(plate)
             
-            rightSide.append(newWeight);
-            leftSide.append(newWeight.cloneNode(true));
+            leftSide.append(newWeightLeft);
+            rightSide.append(newWeightRight);
+            // leftSide.append(newWeight.cloneNode(true));
+
+            newWeightRight.animate(
+                [
+                    {transform: "translateX(40px)" }, // Starting keyframe
+                    {transform: "translateX(0)" }       // Ending keyframe
+                ], 
+                {
+                    duration: 150,
+                    easing: "ease-out"
+                }
+            );
+
+            newWeightLeft.animate(
+                [
+                    {transform: "translateX(-30px)" }, // Starting keyframe
+                    {transform: "translateX(0)" }       // Ending keyframe
+                ], 
+                {
+                    duration: 150,
+                    easing: "ease-out"
+                }
+            );
         })
         
 

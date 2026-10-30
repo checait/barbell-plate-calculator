@@ -74,7 +74,7 @@ input::placeholder {
     width: 80%;
 }
 #barbell-container {
-    display: none;
+    display: flex;
     flex-direction: row;
     /* gap: 8px; */
     align-items: center;
